@@ -15,6 +15,16 @@
     changeText(); // tampilkan pertama kali
     setInterval(changeText, 3000); // ganti tiap 3 detik
 
+  document.addEventListener('DOMContentLoaded', function () {
+        const toggleBtn = document.querySelector('.lg\\:hidden a');
+        const navLinks = document.querySelector('nav > div:nth-child(3)');
+        
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+    });
+
+
 
 
 

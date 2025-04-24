@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Jhelky Walliya">
+    <meta name="keywords" content="Portofolio, Jhelky Walliya, Web Developer, UI/UX Designer">
+    <meta name="author" content="Jhelky Walliya">
     <title>DevJhelkyW</title>
     <link href="./output.css" rel="stylesheet">
+
     <!-- Google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,126 +21,229 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
         }
 
-        h1 {
-            font-family: 'Special Gothic', sans-serif;
-        }
-
-        h2 {
-            font-family: 'Special Gothic', sans-serif;
-        }
-
+        h1,
+        h2,
         h3 {
-            font-family: 'Special Gothic', sans-serif;
+            font-family: 'Gothic A1', sans-serif;
+        }
+
+        @keyframes slideText {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            33% {
+                transform: translateY(-100%);
+            }
+
+            66% {
+                transform: translateY(-200%);
+            }
+        }
+
+        .animate-slideText {
+            animation: slideText 6s infinite ease-in-out;
         }
     </style>
     <!--  style End -->
 </head>
 
 <body>
-    <section class="w-screen mx-auto px-4">
-        <!-- Nav Satar -->
-        <nav class="flex flex-wrap p-6 justify-between bg-white border-b-2 border-gray-100 shadow-lg">
+    <!-- nav star -->
+    <!-- NAVBAR SECTION -->
 
+    <!-- Navbar Section -->
+    <section class="w-screen mx-auto px-4 mb-6">
+        <nav class="flex flex-wrap p-6 justify-between bg-white border-b border-gray-200 shadow-md rounded-b-xl z-50">
 
-            <!-- logo Star -->
+            <!-- Logo -->
             <div class="flex flex-shrink-0 mr-6">
-                <img src="./img/logo.png.png" alt="logo" class=" w-50 h-12 object-contain">
+                <img src="./img/logo.png.png" alt="logo" class="w-50 h-12 object-contain">
             </div>
-            <!-- logo end -->
 
-
+            <!-- Hamburger Menu -->
             <div class="block lg:hidden">
                 <a
-                    class="flex items-center px-3 py-2 rounded border border-indigo-400 text-indigo-500 hover:text-indigo-700 hover:border-indigo-700">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    class="flex items-center px-3 py-2 rounded border border-gray-400 text-gray-700 hover:text-blue-500 hover:border-blue-500">
+                    <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                     </svg>
                 </a>
             </div>
 
-
-            <!-- Menu navigasi (About, Skill, dll.) -->
-            <div class="w-full block flex-wrap lg:flex lg:items-center lg:w-auto gap-4 justify-between flex-grow ">
-                <div class="text-sm  lg:flex-grow text-center">
-                    <a href="#about"
-                        class=" block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-blue-600  text-lg mr-4">
-                        ABOUT
+            <!-- Navigation Links -->
+            <div
+                class="w-full block flex-wrap lg:flex lg:items-center lg:w-auto gap-4 justify-between flex-grow text-lg font-medium text-bold">
+                <div class="text-sm lg:flex-grow text-center">
+                    <a href="#home"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-600 transition duration-300 mr-4">
+                        HOME
                     </a>
-                    <a href="#myskill"
-                        class=" block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-blue-600  text-lg mr-4">
-                        MY SKILL
+                    <a href="#aboutme"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-600 transition duration-300 mr-4">
+                        ABOUT ME
                     </a>
-
                     <a href="#recent"
-                        class=" block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-blue-600  text-lg mr-4">
-                        RICENT WORK
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-600 transition duration-300 mr-4">
+                        RECENT WORK
                     </a>
-
                     <a href="#contact"
-                        class=" block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-blue-600  text-lg mr-4">
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-600 transition duration-300 mr-4">
                         CONTACT ME
                     </a>
-
-                    <a href="#foooter"
-                        class=" block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-blue-600  text-lg mr-4 ">
+                    <a href="#footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-blue-600 transition duration-300 mr-4">
                         FOOTER
                     </a>
                 </div>
+
+                <!-- Login Button -->
                 <div>
-                    <a href="#" class="inline-block text-sm px-4 py-2 rounded
-                text-gray-600 border
-                border-gray-400
-                hover:border-transparent
-                hover:text-white
-                hover:bg-emerald-400 outline outline-cyan-500 mt-4 lg:mt-0">LOG IN</a>
+                    <a href="#login"
+                        class="inline-block text-sm px-5 py-2 rounded-full text-white bg-blue-500 hover:bg-blue-600 transition duration-300 mt-4 lg:mt-0">
+                        LOG IN
+                    </a>
                 </div>
             </div>
         </nav>
     </section>
+
+    <!-- Main Content Section -->
+    <!-- <section class="pt-16 px-4">
+    <h1 class="text-4xl text-gray-800 text-center font-bold p-4 mt-8">Welcome to My Website</h1>
+</section> -->
     <!-- end nav -->
 
 
-    <!-- isi about -->
-    <section class="w-screen mx-auto px-4 border-y border-gray-100">
-        <div class="px-16 py-10 bg-gray-100 shadow-lg rounded-lg mt-10 mb-10">
+    <!-- star home  -->
+    <section id="home"
+        class="relative w-full h-screen flex items-center justify-center bg-gray-900 overflow-hidden mt-0">
+        <!-- Background Image -->
+        <img src="./img/profiles/pante.jpeg" alt="Background"
+            class="absolute top-0 left-0 w-full h-full object-cover opacity-20 z-0">
 
-            <!-- gambar profile -->
-            <div class="flex justify-center mb-4">
-                <img src="./img/WhatsApp Image 2025-04-21 at 06.00.40(1).jpeg"
-                    class="rounded-full w-32 h-32 object-cover shadow-lg" alt="Jhelky Walliya">
-            </div>
-            <!-- end profiles -->
-
-            <!-- Judul About Me -->
-            <h1 class="text-2xl font-bold text-center text-gray-500 mb-2">
-                ABOUT ME
+        <!-- Overlay Content -->
+        <div class="z-10 text-center px-4 mt-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white text-shadow-xs">
+                Hi, I’m <span class="text-blue-500">Jhelky W</span>
             </h1>
-
-            <!-- Garis Pembatas -->
-            <div class="mb-6">
-                <div class="bg-green-300 w-1/3 opacity-75 rounded h-1 mx-auto"></div>
+            <!-- Text Slider -->
+            <div class="h-10 overflow-hidden inline-block text-xl md:text-2xl font-medium text-blue-600 text-shadow-xs">
+                <div class="animate-slideText space-y-3 text-shadow-xs">
+                    <div>Web Developer</div>
+                    <div>UI/UX Designer</div>
+                    <div>Creative Coder</div>
+                </div>
             </div>
+            <p class="mt-6 text-gray-400 max-w-xl mx-auto text-shadow-xs">
+                I build modern websites with beautiful UI & clean code. Let’s collaborate to create something
+                extraordinary!
+            </p>
+            <a href="#portfolio" class="mt-8 inline-block bg-blue-600/70 hover:bg-blue-700/80 text-white py-3 px-6 rounded-full 
+                  backdrop-blur-md shadow-lg transition-transform transform hover:scale-105">
+                View My Work
+            </a>
 
-            <!-- Nama -->
-            <h2 class="text-center text-3xl mb-2 font-bold text-gray-600">
-                Hello, I am <span id="animated-text"
-                    class="transition-opacity duration-500 ease-in-out text-blue-500"></span>
-            </h2>
-
-            <!-- Deskripsi -->
-            <div class="text-center">
-                <p class="text-lg text-gray-700 font-medium">
-                    <strong>Web Developer & UI/UX Enthusiast in one creative mind.</strong>
-                </p>
-                <p class="text-lg text-gray-700 font-medium mt-2">
-                    I am a student at the University of Sains & Teknologi Jayapura, West Papua, majoring in Informatics
-                    Engineering.
-                </p>
-            </div>
         </div>
     </section>
+
+    <!-- end home -->
+
+
+
+    <!-- star my work -->
+    <section class="w-full py-12 bg-gray-100 px-6 flex justify-center items-center">
+        <div class="max-w-6xl w-full bg-white shadow-lg rounded-lg p-8 flex flex-wrap justify-center gap-8">
+
+            <!-- KIRI: Profil, Kontak, dan Skills -->
+            <div class="w-full md:w-1/3 text-center md:text-left">
+                <!-- Foto dan Nama -->
+                <img src="./img/profiles/sinak.jpeg" alt="Jhelky Walliya"
+                    class="w-32 h-32 mx-auto md:mx-0 rounded-full shadow-md object-cover mb-4" />
+                <h2 class="text-2xl font-bold text-gray-800 mb-1">Jhelky Walliya</h2>
+                <p class="text-gray-600 font-medium">Full Stack Developer Junior</p>
+
+                <!-- Kontak -->
+                <div class="mt-4 text-sm text-gray-600 space-y-2">
+                    <p><strong>Email:</strong> Jhelkyw@gmail.com</p>
+                    <p><strong>Phone:</strong> 082252201125</p>
+                </div>
+
+                <!-- Skills -->
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm font-medium text-gray-700">HTML <span class="float-right">100%</span></p>
+                            <div class="w-full bg-gray-200 h-3 rounded-full">
+                                <div class="bg-blue-500 h-3 rounded-full w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-700">CSS <span class="float-right">90%</span></p>
+                            <div class="w-full bg-gray-200 h-3 rounded-full">
+                                <div class="bg-blue-400 h-3 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-700">JavaScript <span class="float-right">75%</span>
+                            </p>
+                            <div class="w-full bg-gray-200 h-3 rounded-full">
+                                <div class="bg-yellow-400 h-3 rounded-full w-[75%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-700">PHP <span class="float-right">55%</span>
+                            </p>
+                            <div class="w-full bg-gray-200 h-3 rounded-full">
+                                <div class="bg-pink-400 h-3 rounded-full w-[55%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TENGAH: About Me -->
+            <div id="aboutme" class="w-full md:w-1/3 text-center md:text-left">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 text-shadow-lg">About Me</h3>
+                <p class="text-gray-700 text-sm leading-relaxed text-justify text-shadow-lg">
+                    Hi, I’m <strong class="text-black">Jhelky Walliya — a passionate Full Stack Developer Junior and
+                        UI/UX Enthusiast based in
+                        Jayapura, Papua.</strong>
+                    I blend creativity with logic to build digital experiences that are not just functional, but also
+                    beautiful and
+                    meaningful.
+
+                    <strong class="text-black">
+                        As a student of Informatics Engineering at the University of Science and Technology Jayapura,
+                    </strong> I’ve
+                    dedicated myself to
+                    learning modern web technologies, from crafting clean and responsive interfaces with HTML, CSS, and
+                    JavaScript, to
+                    developing dynamic backend systems.
+
+                    I believe that great design is more than aesthetics—it's about creating smooth, intuitive, and
+                    human-centered
+                    experiences. Every line of code I write is driven by the goal of making digital products better and
+                    more impactful.
+
+                    I am always eager to collaborate, learn from others, and grow with every project I take on.
+
+                    “Code with heart. Design with purpose.”
+
+                    Let’s build something amazing togeth
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- end my work -->
+
 
     <!-- Section Skill Overview -->
     <section class="px-4 py-12 bg-white dark:bg-gray-900 m-16" id="skills">
@@ -151,7 +258,7 @@
                     <div class="flex justify-center mb-4">
                         <img src="./img/icons/engineer.png" alt="System Analyst Icon" class="h-12 w-12">
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                    <p class="text-gray-600 dark:text-gray-300 text-sm text-shadow-2xs">
                         Analyzing user needs, evaluating system workflows, and creating effective solutions using
                         flowcharts, DFDs, and ERDs.
                     </p>
@@ -174,7 +281,7 @@
                         <img src="./img/icons/laravel_logo_logos_icon.png" alt="Laravel" class="h-8 w-8"
                             title="Laravel">
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                    <p class="text-gray-600 dark:text-gray-300 text-sm text-shadow-lg">
                         Proficient in modern web technologies and frameworks for both frontend and backend development.
                     </p>
                 </div>
@@ -190,7 +297,7 @@
                         <img src="./img/icons/9074204_tailwind_icon.png" alt="Tailwind CSS" class="h-12 w-12 "
                             title="Tailwind CSS">
                     </div>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                    <p class="text-gray-600 dark:text-gray-300 text-sm text-shadow-lg">
                         Designing modern and intuitive user interfaces with Figma & Tailwind CSS. Turning ideas into
                         interactive and functional layouts.
                     </p>
@@ -198,16 +305,238 @@
             </div>
         </div>
     </section>
-
     <!-- end about -->
 
-    <section class="w-screen mx-auto px-4 border-y-indigo-100">My Skill</section>
-    <section class="w-screen mx-auto px-4 border-y-indigo-100 lg:text-blue-400">Recent Work</section>
-    <section class="w-screen mx-auto px-4 border-y-indigo-100">Contact Me</section>
-    <section class="w-screen mx-auto px-4 border-y-indigo-100">Foooter</section>
 
+    <!-- Star SKILL -->
+    <section class="w-full py-10 bg-white px-4">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center">
+
+            <!-- Gambar lebih kecil -->
+            <div class="w-full md:w-3/12 px-4 mb-8 md:mb-0">
+                <img src="./img/myskill/myskill-removebg.png"
+                    class="w-[80%] h-auto mx-auto rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300"
+                    alt="My Skill" />
+            </div>
+
+            <!-- Konten Skill Framework -->
+            <div class="w-full md:w-7/12 px-4">
+                <div class="md:pr-8">
+                    <h4 class="text-3xl font-bold text-center text-gray-700 uppercase mb-2 text-shadow-xs">
+                        Skillset Frameworks
+                    </h4>
+                    <div class="bg-green-300 w-24 h-1 mx-auto rounded opacity-75 mb-6"></div>
+                    <p class="text-md text-gray-600 text-center mb-8 text-shadow-xs">
+                        Below are the items & my skill levels in using frameworks!
+                    </p>
+
+                    <ul class="space-y-5">
+                        <!-- Bootstrap -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/boostrap.png" alt="Bootstrap" class="h-6 w-6 mr-2"> Bootstrap
+                                </span>
+                                <span class="text-gray-500 text-sm">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[90%] rounded-full transition-all duration-300 hover:w-[95%]">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Tailwind CSS -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/Tailwind_icon (2).png" alt="TailwindCss" class="h-6 w-6 mr-2">
+                                    TailwindCss
+                                </span>
+                                <span class="text-gray-500 text-sm">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[65%] rounded-full transition-all duration-300 hover:w-[70%]">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- React JS -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/js_logo_react_react native_icon.png" alt="React Js"
+                                        class="h-6 w-6 mr-2"> React Js
+                                </span>
+                                <span class="text-gray-500 text-sm">30%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[30%] rounded-full transition-all duration-300 hover:w-[40%]">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Laravel -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/laravel_logo_logos_icon.png" alt="Laravel"
+                                        class="h-6 w-6 mr-2">
+                                    Laravel
+                                </span>
+                                <span class="text-gray-500 text-sm">20%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[20%] rounded-full transition-all duration-300 hover:w-[30%]">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Vue.js -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/4375161_logo_vuejs_icon.png" alt="Vue.Js"
+                                        class="h-6 w-6 mr-2">
+                                    Vue.Js
+                                </span>
+                                <span class="text-gray-500 text-sm">10%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[10%] rounded-full transition-all duration-300 hover:w-[20%]">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END SKILL -->
+
+
+
+    <!-- My Skill Section -->
+    <section id="recent" class="w-screen mx-auto py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Section Title -->
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                Technical Expertise
+            </h2>
+
+            <div class="flex flex-wrap items-center">
+                <!-- Image Column - Ukuran gambar diperkecil -->
+                <div class="w-full md:w-5/12 lg:w-4/12 px-6 mb-8 md:mb-0 mx-auto text-center">
+                    <img src="./img/myskill/ux.jpg" class="w-full max-w-[180px] md:max-w-[220px] h-auto rounded-xl 
+                            shadow-md hover:shadow-lg transition-shadow duration-300 
+                            mx-auto" alt="UX Design Process">
+                    <p class="text-sm text-gray-500 mt-2">UX Design Process</p>
+                </div>
+
+                <!-- Skills Column -->
+                <div class="w-full md:w-7/12 lg:w-8/12 px-6">
+                    <!-- Skills Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Skill Items -->
+                        <div class="p-4 bg-gray-50 rounded-xl transform hover:-translate-y-2 transition duration-300">
+                            <i class="fab fa-react text-4xl text-blue-500 mb-3"></i>
+                            <h3 class="text-xl font-semibold mb-2">React</h3>
+                            <p class="text-gray-600">Advanced component-based architecture</p>
+                        </div>
+
+                        <!-- Tambahkan item skill lainnya sesuai kebutuhan -->
+                    </div>
+
+                    <!-- Call to Action Button -->
+                    <div class="mt-12 text-center">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full 
+                        transform hover:scale-105 transition duration-300">
+                            Let's Collaborate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end my skill -->
+
+    <!-- Star contact -->
+    <section id="contact" class="py-16 bg-white px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Contact Me</h2>
+
+            <!-- Informasi Kontak -->
+            <div class="flex flex-col md:flex-row justify-between items-start mb-8 text-gray-800 gap-8">
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-2">Address</h3>
+                    <p class="text-gray-600">Jayapura Papua</p>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-2">Call Us</h3>
+                    <p class="text-gray-600">+62 82251201125</p>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-2">Email Us</h3>
+                    <p class="text-gray-600">jhelkyw@gmail.com</p>
+                </div>
+            </div>
+
+
+            <!-- Formulir Kontak -->
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name"
+                    class="w-full p-3 rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500" />
+                <input type="email" placeholder="Your Email"
+                    class="w-full p-3 rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500" />
+                <textarea rows="5" placeholder="Message"
+                    class="w-full p-3 rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500"></textarea>
+                <button type="submit"
+                    class="bg-white text-blue-600 border border-blue-600 px-6 py-2 rounded hover:bg-blue-600 hover:text-white transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- end contact -->
+
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-gray-900 text-white py-6 text-center">
+        <p class="mb-4">&copy; 2025 DevJhelkyW. All rights reserved.</p>
+
+        <div class="flex justify-center space-x-6">
+            <a href="https://www.instagram.com/username" target="_blank"
+                class="text-gray-300 hover:text-white transition">
+                <img src="./img/icon sosial/5296501_linkedin_network_linkedin logo_icon.png" class="w-5 h-5"
+                    alt="linkedin">
+            </a>
+            <a href="https://www.facebook.com/username" target="_blank"
+                class="text-gray-300 hover:text-white transition">
+                <img src="./img/icon sosial/1298747_instagram_brand_logo_social media_icon.png" class="w-5 h-5"
+                    alt="instagram">
+            </a>
+            <a href="https://wa.me/6282252201125" target="_blank" class="text-gray-300 hover:text-white transition">
+                <img src="./img/icon sosial/4102606_applications_media_social_whatsapp_icon.png" class="w-5 h-5"
+                    alt="whatsapp">
+            </a>
+        </div>
+    </footer>
+
+    <!-- end footer -->
     <script src="./script.js">
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleBtn = document.querySelector('.lg\\:hidden a');
+            const navLinks = document.querySelector('nav > div:nth-child(3)');
 
+            toggleBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('hidden');
+            });
+        });
     </script>
 </body>
 
