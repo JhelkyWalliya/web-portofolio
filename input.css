@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+<!-- Tambahkan style di bawah ini di bagian <style> atau dalam file CSS -->
+<style>
+    @keyframes slideText {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        33% {
+            transform: translateY(-100%);
+        }
+
+        66% {
+            transform: translateY(-200%);
+        }
+    }
+
+    .animate-slideText {
+        animation: slideText 6s infinite ease-in-out;
+    }
+</style>
+
+
+/* styles.css */
+.text-shadow-book-demo {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.text-shadow-see-pricing {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-active path {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.hamburger-active path:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger-active path:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-active path:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+

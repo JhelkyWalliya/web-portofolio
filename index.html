@@ -1,0 +1,557 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Jhelky Walliya">
+    <meta name="keywords" content="Portofolio, Jhelky Walliya, Web Developer, UI/UX Designer">
+    <meta name="author" content="Jhelky Walliya">
+    <title>DevJhelkyW</title>
+    <link href="./output.css" rel="stylesheet">
+
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,
+        200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;
+        1,600;1,700;1,800;1,900&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+    <!-- end google font -->
+    <!-- star style  -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Gothic A1', sans-serif;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0
+            }
+
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 0.6s ease-out;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .skill-bar {
+            transition: width 0.5s ease-in-out;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+    <!--  style End -->
+</head>
+
+<body>
+    <!-- nav star -->
+    <section id="home" class="relative w-full h-screen overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- ✅ Background Image -->
+        <img src="./img/profiles/pante.jpeg" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+
+        <!-- ✅ Dark Overlay agar gambar gelap tapi konten tetap menonjol -->
+        <div class="absolute inset-0 bg-black/70 z-10"></div>
+
+        <!-- ✅ Navbar -->
+        <nav
+            class="fixed top-0 left-0 w-full z-50 px-4 py-4 lg:px-12 flex items-center justify-between bg-black/30 backdrop-blur-sm shadow-md rounded-b-xl">
+
+            <!-- Logo -->
+            <div class="flex items-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="./img/logo.png.png" alt="logo" class="h-10 object-contain mr-3" />
+                <span class="text-white font-bold text-lg">DevJhelkyW</span>
+            </div>
+
+            <!-- Navigation Center -->
+            <div class="hidden lg:flex flex-1 justify-center space-x-6 font-medium text-sm uppercase text-bold"
+                data-aos="fade-up" data-aos-delay="200">
+                <a href="#home" class="text-white hover:text-blue-400 transition">Home</a>
+                <a href="#about" class="text-white hover:text-blue-400 transition">About</a>
+                <a href="#Projects" class="text-white hover:text-blue-400 transition">Projects</a>
+                <a href="#contact" class="text-white hover:text-blue-400 transition">Contact</a>
+            </div>
+
+            <!-- Mobile Menu (disembunyikan secara default) -->
+            <div id="mobile-menu" aria-hidden="true"
+                class="hidden flex-col space-y-4 mt-4 text-white bg-blue-800 p-4 rounded-lg lg:hidden"
+                data-aos="fade-up" data-aos-delay="200">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Tombol Hamburger (hanya muncul di mobile) -->
+            <div class="block lg:hidden" data-aos="fade-up" data-aos-delay="200">
+                <button id="hamburger-btn"
+                    class="text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-lg p-1"
+                    aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-8 h-8 fill-current transition-transform" viewBox="0 0 20 20">
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+        </nav>
+
+        <!-- ✅ Main Content -->
+        <div class="relative z-20 h-full flex flex-col justify-center items-center text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+                Hi, I’m <span class="text-blue-500">Jhelky W</span>
+            </h1>
+
+            <!-- Typewriter -->
+            <div class="h-10 text-xl md:text-2xl font-semibold text-blue-400 drop-shadow-md">
+                <span id="typewriterText" class="whitespace-nowrap"></span>
+                <span class="text-white animate-blink">|</span>
+            </div>
+
+            <p class="mt-6 text-gray-300 max-w-xl mx-auto drop-shadow-sm">
+                I build modern websites with beautiful UI & clean code. Let’s collaborate to create something
+                extraordinary!
+            </p>
+        </div>
+    </section>
+    <!-- end nav -->
+
+    <!-- star my work -->
+    <section class="w-full py-12 bg-gray-100 px-6 flex justify-center items-center" data-aos="fade-up"
+        data-aos-delay="200">
+        <div class="max-w-6xl w-full bg-white shadow-lg rounded-lg p-8 flex flex-wrap justify-center gap-8"
+            data-aos="fade-up" data-aos-delay="200">
+
+            <!-- KIRI: Profil, Kontak, dan Skills -->
+            <div class="w-full md:w-1/3 text-center md:text-left">
+                <!-- Foto dan Nama -->
+                <img src="./img/profiles/sinak.jpeg" alt="Jhelky Walliya"
+                    class="w-32 h-32 mx-auto md:mx-0 rounded-full shadow-md object-cover mb-4" />
+                <h2 class="text-2xl font-bold text-gray-800 mb-1">Jhelky Walliya</h2>
+                <p class="text-gray-600 font-medium">Full Stack Developer Junior</p>
+
+                <!-- Kontak -->
+                <div class="mt-4 text-sm text-gray-600 space-y-2">
+                    <p><strong>Email:</strong> Jhelkyw@gmail.com</p>
+                    <p><strong>Phone:</strong> 082252201125</p>
+                </div>
+
+                <!-- Skills -->
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm font-medium text-gray-700">HTML <span class="float-right">100%</span></p>
+                            <div class="w-full bg-gray-200 h-3 rounded-full">
+                                <div class="bg-blue-500 h-3 rounded-full w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-700">CSS <span class="float-right">90%</span></p>
+                            <div class="w-full bg-gray-200 h-3 rounded-full">
+                                <div class="bg-blue-400 h-3 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-700">JavaScript <span class="float-right">75%</span>
+                            </p>
+                            <div class="w-full bg-gray-200 h-3 rounded-full">
+                                <div class="bg-yellow-400 h-3 rounded-full w-[75%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-700">PHP <span class="float-right">55%</span>
+                            </p>
+                            <div class="w-full bg-gray-200 h-3 rounded-full">
+                                <div class="bg-pink-400 h-3 rounded-full w-[55%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TENGAH: About Me -->
+            <div id="about" class="w-full md:w-1/3 text-center md:text-left">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2 text-shadow-lg">About Me</h3>
+                <p class="text-gray-700 text-sm leading-relaxed text-justify text-shadow-lg">
+                    Hi, I’m <strong class="text-black">Jhelky Walliya — a passionate Full Stack Developer Junior and
+                        UI/UX Enthusiast based in
+                        Jayapura, Papua.</strong>
+                    I blend creativity with logic to build digital experiences that are not just functional, but also
+                    beautiful and
+                    meaningful.
+
+                    <strong class="text-black">
+                        As a student of Informatics Engineering at the University of Science and Technology Jayapura,
+                    </strong> I’ve
+                    dedicated myself to
+                    learning modern web technologies, from crafting clean and responsive interfaces with HTML, CSS, and
+                    JavaScript, to
+                    developing dynamic backend systems.
+
+                    I believe that great design is more than aesthetics—it's about creating smooth, intuitive, and
+                    human-centered
+                    experiences. Every line of code I write is driven by the goal of making digital products better and
+                    more impactful.
+
+                    I am always eager to collaborate, learn from others, and grow with every project I take on.
+
+                    “Code with heart. Design with purpose.”
+
+                    Let’s build something amazing togeth
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- end my work -->
+
+
+    <!-- Section Skill Overview -->
+    <section class="px-4 py-12 bg-white dark:bg-gray-900 m-16" id="skills" data-aos="fade-up" data-aos-delay="200">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">What I Do</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- System Analyst -->
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-2">System Analyst</h3>
+                    <div class="flex justify-center mb-4">
+                        <img src="./img/icons/engineer.png" alt="System Analyst Icon" class="h-12 w-12">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm text-shadow-2xs">
+                        Analyzing user needs, evaluating system workflows, and creating effective solutions using
+                        flowcharts, DFDs, and ERDs.
+                    </p>
+                </div>
+
+                <!-- Skills -->
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-2">My Skills</h3>
+                    <div class="flex flex-wrap justify-center gap-3 mb-4">
+                        <img src="./img/icons/html.png" alt="HTML" class="h-8 w-8" title="HTML">
+                        <img src="./img/icons/css3.png" alt="CSS" class="h-8 w-8" title="CSS">
+                        <img src="./img/icons/js_logo_logos_icon.png" alt="JavaScript" class="h-8 w-8"
+                            title="JavaScript">
+                        <img src="./img/icons/logo_php_icon.png" alt="PHP" class="h-8 w-8" title="PHP">
+                        <img src="./img/icons/js_logo_react_react native_icon.png" alt="React" class="h-8 w-8"
+                            title="React">
+                        <img src="./img/icons/nodejs.png" alt="Node.js" class="h-8 w-8" title="Node.js">
+                        <img src="./img/icons/mysql.png" alt="MySQL" class="h-8 w-8" title="MySQL">
+                        <img src="./img/icons/laravel_logo_logos_icon.png" alt="Laravel" class="h-8 w-8"
+                            title="Laravel">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm text-shadow-lg">
+                        Proficient in modern web technologies and frameworks for both frontend and backend development.
+                    </p>
+                </div>
+
+                <!-- UI/UX Designer -->
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+
+                    <h3 class="text-xl font-semibold text-gray-700 dark:text-white mb-2">UI/UX Designer</h3>
+                    <div class="flex justify-center mb-4">
+                        <img src="./img/icons/7564187_figma_logo_brand_icon.png" alt="UI/UX Icon" class="h-12 w-12"
+                            title="Figma">
+                        <img src="./img/icons/9074204_tailwind_icon.png" alt="Tailwind CSS" class="h-12 w-12 "
+                            title="Tailwind CSS">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm text-shadow-lg">
+                        Designing modern and intuitive user interfaces with Figma & Tailwind CSS. Turning ideas into
+                        interactive and functional layouts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end about -->
+
+
+    <!-- Star SKILL -->
+    <section class="w-full py-10 bg-white px-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center" data-aos="fade-up"
+            data-aos-delay="200">
+
+            <!-- Gambar lebih kecil -->
+            <div class="w-full md:w-3/12 px-4 mb-8 md:mb-0">
+                <img src="./img/myskill/myskill-removebg.png"
+                    class="w-[80%] h-auto mx-auto rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300"
+                    alt="My Skill" />
+            </div>
+
+            <!-- Konten Skill Framework -->
+            <div class="w-full md:w-7/12 px-4">
+                <div class="md:pr-8">
+                    <h4 class="text-3xl font-bold text-center text-gray-700 uppercase mb-2 text-shadow-xs">
+                        Skillset Frameworks
+                    </h4>
+                    <div class="bg-green-300 w-24 h-1 mx-auto rounded opacity-75 mb-6"></div>
+                    <p class="text-md text-gray-600 text-center mb-8 text-shadow-xs">
+                        Below are the items & my skill levels in using frameworks!
+                    </p>
+
+                    <ul class="space-y-5">
+                        <!-- Bootstrap -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/boostrap.png" alt="Bootstrap" class="h-6 w-6 mr-2"> Bootstrap
+                                </span>
+                                <span class="text-gray-500 text-sm">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[90%] rounded-full transition-all duration-300 hover:w-[95%]">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Tailwind CSS -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/Tailwind_icon (2).png" alt="TailwindCss" class="h-6 w-6 mr-2">
+                                    TailwindCss
+                                </span>
+                                <span class="text-gray-500 text-sm">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[65%] rounded-full transition-all duration-300 hover:w-[70%]">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- React JS -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/js_logo_react_react native_icon.png" alt="React Js"
+                                        class="h-6 w-6 mr-2"> React Js
+                                </span>
+                                <span class="text-gray-500 text-sm">30%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[30%] rounded-full transition-all duration-300 hover:w-[40%]">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Laravel -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/laravel_logo_logos_icon.png" alt="Laravel"
+                                        class="h-6 w-6 mr-2">
+                                    Laravel
+                                </span>
+                                <span class="text-gray-500 text-sm">20%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[20%] rounded-full transition-all duration-300 hover:w-[30%]">
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Vue.js -->
+                        <li>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700 text-lg font-medium flex items-center">
+                                    <img src="./img/icons/4375161_logo_vuejs_icon.png" alt="Vue.Js"
+                                        class="h-6 w-6 mr-2">
+                                    Vue.Js
+                                </span>
+                                <span class="text-gray-500 text-sm">10%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div
+                                    class="bg-blue-500 h-3 w-[10%] rounded-full transition-all duration-300 hover:w-[20%]">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END SKILL -->
+
+
+
+    <!-- My Skill Section -->
+    <section id="Projects" class="w-screen mx-auto py-20 bg-white" data-aos="fade-up" data-aos-delay="200">
+        <div class="container mx-auto px-4" data-aos="fade-up" data-aos-delay="200">
+            <!-- Section Title -->
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                Technical Expertise
+            </h2>
+
+            <div class="flex flex-wrap items-center">
+                <!-- Image Column - Ukuran gambar diperkecil -->
+                <div class="w-full md:w-5/12 lg:w-4/12 px-6 mb-8 md:mb-0 mx-auto text-center">
+                    <img src="./img/myskill/ux.jpg" class="w-full max-w-[180px] md:max-w-[220px] h-auto rounded-xl 
+                            shadow-md hover:shadow-lg transition-shadow duration-300 
+                            mx-auto" alt="UX Design Process">
+                    <p class="text-sm text-gray-500 mt-2">UX Design Process</p>
+                </div>
+
+                <div class="w-full md:w-5/12 lg:w-4/12 px-6 mb-8 md:mb-0 mx-auto text-center">
+                    <img src="./img/myskill/ux.jpg" class="w-full max-w-[180px] md:max-w-[220px] h-auto rounded-xl 
+                                            shadow-md hover:shadow-lg transition-shadow duration-300 
+                                            mx-auto" alt="UX Design Process">
+                    <p class="text-sm text-gray-500 mt-2">UX Design Process</p>
+                </div>
+
+                <div class="w-full md:w-5/12 lg:w-4/12 px-6 mb-8 md:mb-0 mx-auto text-center">
+                    <img src="./img/myskill/ux.jpg" class="w-full max-w-[180px] md:max-w-[220px] h-auto rounded-xl 
+                                            shadow-md hover:shadow-lg transition-shadow duration-300 
+                                            mx-auto" alt="UX Design Process">
+                    <p class="text-sm text-gray-500 mt-2">UX Design Process</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end my skill -->
+
+    <!-- Star contact -->
+    <section id="contact" class="py-16 bg-white px-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Contact</h2>
+
+            <!-- Informasi Kontak -->
+            <div class="flex flex-col md:flex-row justify-between items-start mb-8 text-gray-800 gap-8"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-2">Address</h3>
+                    <p class="text-gray-600">Jayapura Papua</p>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-2">Call Us</h3>
+                    <p class="text-gray-600">+62 82251201125</p>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-2">Email Us</h3>
+                    <p class="text-gray-600">jhelkyw@gmail.com</p>
+                </div>
+            </div>
+
+
+            <!-- Formulir Kontak -->
+            <form class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <input type="text" placeholder="Your Name"
+                    class="w-full p-3 rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500" />
+                <input type="email" placeholder="Your Email"
+                    class="w-full p-3 rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500" />
+                <textarea rows="5" placeholder="Message"
+                    class="w-full p-3 rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-500"></textarea>
+                <button type="submit"
+                    class="bg-white text-blue-600 border border-blue-600 px-6 py-2 rounded hover:bg-blue-600 hover:text-white transition">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- end contact -->
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="max-w-6xl mx-auto px-4 " data-aos="fade-up" data-aos-delay="200">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">DevJhelkyW</h3>
+                    <p class="text-sm">Creating digital experiences blending creativity with technical excellence.</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-white font-semibold">Quick Links</h4>
+                    <a href="#home" class="block hover:text-blue-400">Home</a>
+                    <a href="#about" class="block hover:text-blue-400">About</a>
+                    <a href="#skills" class="block hover:text-blue-400">Skills</a>
+                </div>
+                <!-- Social Links -->
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-white font-semibold">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <p class="text-sm">jhelkyw@gmail.com</p>
+                    <p class="text-sm mt-2">+62 822 5220 1125</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 text-center text-sm pt-4">
+                &copy; 2025 Desain By Jhelky W. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- end footer -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./script.js">
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleBtn = document.querySelector('.lg\\:hidden a');
+            const navLinks = document.querySelector('nav > div:nth-child(3)');
+
+            toggleBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('hidden');
+            });
+        });
+
+        AOS.init({
+            once: true, // animasi hanya sekali scroll
+            duration: 1000, // durasi animasi (ms)
+            easing: 'ease-in-out', // gaya animasi
+        });
+    </script>
+</body>
+
+</html>
